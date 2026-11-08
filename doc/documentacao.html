@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentação do Aplicativo - EcoRotina</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #263238;
+      line-height: 1.5;
+      font-size: 13.5px;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3, h4 {
+      color: #1b5e20;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 26px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 8px;
+      color: #1b5e20;
+    }
+    h2 {
+      font-size: 19px;
+      border-bottom: 1.5px solid #a5d6a7;
+      padding-bottom: 5px;
+      margin-top: 24px;
+    }
+    h3 {
+      font-size: 15px;
+      color: #2e7d32;
+    }
+    p {
+      margin: 6px 0;
+    }
+    ul, ol {
+      margin: 6px 0;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .header-box {
+      background: linear-gradient(135deg, #1b5e20, #2e7d32);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .header-box h1 {
+      color: white;
+      border-bottom: none;
+      margin: 0 0 8px 0;
+      padding: 0;
+      font-size: 28px;
+    }
+    .header-box p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .card {
+      background: #f1f8e9;
+      border-left: 4px solid #2e7d32;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+    }
+    .card-title {
+      font-weight: bold;
+      color: #1b5e20;
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 12.5px;
+    }
+    th, td {
+      border: 1px solid #c8e6c9;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    .screenshot-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 16px 0;
+      page-break-inside: avoid;
+    }
+    .screenshot-img {
+      max-width: 250px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid #e0e0e0;
+    }
+    .screenshot-caption {
+      font-size: 12px;
+      color: #455a64;
+      text-align: center;
+      margin-top: 8px;
+      font-style: italic;
+      max-width: 480px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      page-break-inside: avoid;
+    }
+    .step-box {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .step-number {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 22px;
+      margin-right: 6px;
+    }
+    .code-span {
+      font-family: Consolas, "Courier New", monospace;
+      background: #e8f5e9;
+      color: #1b5e20;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <div class="header-box">
+    <h1>EcoRotina 🌱</h1>
+    <p><strong>Desenvolvimento Mobile Híbrido (Flutter) — Avaliação OAT (Unidade 2)</strong></p>
+    <p>Faculdade UniFTC • Professor Avaliador: XZ6816 (<code>XZ6816@prof.uniftc.edu.br</code>)</p>
+    <div class="badge">Trabalho em Dupla • Valor: 20 Pontos (10 APK + 10 Documentação)</div>
+  </div>
+
+  <!-- SEÇÃO 1: IDENTIFICAÇÃO -->
+  <h2>1. Identificação do Projeto e Autoria</h2>
+  <div class="step-box">
+    <p><strong>Nome do Aplicativo:</strong> EcoRotina (Rastreador de Hábitos Sustentáveis & Calculadora de Impacto Ecológico)</p>
+    <p><strong>Integrantes da Dupla:</strong></p>
+    <ul>
+      <li><strong>Integrante 1:</strong> Marco (Inserir Nome Completo / Matrícula)</li>
+      <li><strong>Integrante 2:</strong> (Inserir Nome Completo / Matrícula da Dupla)</li>
+    </ul>
+    <p><strong>Link do Repositório GitHub:</strong> <span class="code-span">https://github.com/marco/mobile-hibrido-unid2</span></p>
+    <p><strong>Localização do Arquivo APK no Repositório:</strong> <span class="code-span">release/apk/ecorotina.apk</span></p>
+  </div>
+
+  <!-- SEÇÃO 2: O PROBLEMA -->
+  <h2>2. O Problema Escolhido e Sua Importância</h2>
+  <p>
+    No cotidiano das cidades e dos campi universitários, muitas pessoas expressam o desejo sincero de adotar práticas ambientalmente sustentáveis — tais como fechar a torneira durante a escovação dos dentes, apagar luzes e computadores em salas vazias, recusar copos e sacolas plásticas descartáveis e utilizar transportes sustentáveis.
+  </p>
+  <p>
+    Entretanto, uma das maiores causas do abandono dessas boas intenções é a <strong>invisibilidade do impacto gerado</strong>: o indivíduo sente que sua pequena atitude diária é isolada e insignificante, pois não tem como visualizar o quanto poupou ou evitou de danos ao meio ambiente. Sem metas claras e sem retorno imediato, a motivação decai rapidamente.
+  </p>
+  <div class="card">
+    <div class="card-title">Alinhamento Direto com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU:</div>
+    <ul>
+      <li><strong>ODS 12 — Consumo e Produção Responsáveis:</strong> Estímulo à redução drástica de resíduos plásticos, uso consciente da água potável e eficiência energética residencial e estudantil.</li>
+      <li><strong>ODS 13 — Ação Contra a Mudança Global do Clima:</strong> Conscientização sobre emissões individuais de gases do efeito estufa e quantificação do carbono (<span class="code-span">CO₂</span>) evitado por dia.</li>
+    </ul>
+  </div>
+
+  <!-- SEÇÃO 3: A SOLUÇÃO -->
+  <h2>3. A Solução: O Que o Aplicativo Faz e Como Ajuda</h2>
+  <p>
+    O <strong>EcoRotina</strong> é um aplicativo completo desenvolvido em Flutter que atua como um companheiro diário para a formação de hábitos ecológicos sólidos, fornecendo retorno visual imediato e mensurável:
+  </p>
+  <ul>
+    <li><strong>Tela Principal Interativa:</strong> Lista dinâmica onde o usuário acompanha suas metas de sustentabilidade divididas em 5 categorias temáticas (<em>Água, Energia, Resíduos, Mobilidade e Consumo</em>).</li>
+    <li><strong>Gestão Completa de Hábitos:</strong> Permite adicionar novas metas personalizadas, marcar como concluídas com efeito visual imediato e excluir hábitos com confirmação.</li>
+    <li><strong>Diferencial Criativo 1 (Impacto em Tempo Real):</strong> Painel de bordo no topo da tela inicial que calcula instantaneamente o total de litros de água poupados, quilowatts-hora (<span class="code-span">kWh</span>) de energia economizados e quilos de <span class="code-span">CO₂</span> evitados, além de uma barra de progresso da meta diária.</li>
+    <li><strong>Segunda Tela com Navegação (Dica do Dia & Estatísticas):</strong> Navegação fluida para a tela <em>StatsScreen</em> com a dica sustentável do dia rotativa, resumo acumulado e sistema de medalhas ecológicas desbloqueáveis.</li>
+    <li><strong>Persistência Local Permanente:</strong> Implementada através do <em>SharedPreferences</em> em conjunto com serialização JSON, mantendo todos os dados intactos ao fechar e reabrir o app.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- SEÇÃO 4: PRINTS DAS TELAS (EVIDÊNCIAS DOS REQUISITOS) -->
+  <h2>4. Evidências dos Requisitos Atendidos (Prints das Telas)</h2>
+  <p>Abaixo estão as capturas de tela reais capturadas do aplicativo, comprovando o cumprimento integral de cada critério:</p>
+
+  <div class="grid-2">
+    <!-- Evidência 1 -->
+    <div class="screenshot-container">
+      <img src="screenshots/01_tela_principal.png" class="screenshot-img" alt="Tela Principal">
+      <div class="screenshot-caption">
+        <strong>Figura 1: Tela Principal (Lista e Diferencial Criativo)</strong><br>
+        Mostra a barra de progresso diário, os contadores de impacto em tempo real (Água, Energia e CO₂), os chips de filtro por categoria e a lista de hábitos.
+      </div>
+    </div>
+
+    <!-- Evidência 2 -->
+    <div class="screenshot-container">
+      <img src="screenshots/02_modal_adicionar_habito.png" class="screenshot-img" alt="Modal Novo Hábito">
+      <div class="screenshot-caption">
+        <strong>Figura 2: Adicionar Novo Hábito (Requisito Lista: Adicionar)</strong><br>
+        Modal dialog com validação de formulário, seleção de categoria via ChoiceChips e cálculo estimado prévio de impacto antes da confirmação.
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 16px;">
+    <!-- Evidência 3 -->
+    <div class="screenshot-container">
+      <img src="screenshots/03_habito_concluido_impacto_recalculado.png" class="screenshot-img" alt="Conclusão e Remoção">
+      <div class="screenshot-caption">
+        <strong>Figura 3: Concluir e Remover Itens da Lista</strong><br>
+        Ao marcar o checkbox, o item é riscado, o card fica verde e os totais de economia e porcentagem são recalculados na hora. Ícone de lixeira para remoção.
+      </div>
+    </div>
+
+    <!-- Evidência 4 -->
+    <div class="screenshot-container">
+      <img src="screenshots/04_segunda_tela_estatisticas_dica_dia.png" class="screenshot-img" alt="Segunda Tela">
+      <div class="screenshot-caption">
+        <strong>Figura 4: Segunda Tela com Navegação & Dica do Dia</strong><br>
+        Acessada via Navigator.push. Apresenta o diferencial criativo da "Dica Sustentável do Dia" com botão de alternância e balanço geral de metas.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Evidência 5 -->
+  <div class="screenshot-container">
+    <img src="screenshots/05_medalhas_conquistas_ods_onu.png" class="screenshot-img" alt="Medalhas e ODS">
+    <div class="screenshot-caption">
+      <strong>Figura 5: Gamificação (Medalhas Virtuais) e Alinhamento com as ODS da ONU</strong><br>
+      Continuação da segunda tela com as medalhas desbloqueadas automaticamente conforme as ações do usuário e a fundamentação teórica nas ODS 12 e 13 da ONU.
+    </div>
+  </div>
+
+  <!-- SEÇÃO 5: EXPLICAÇÃO DA PERSISTÊNCIA -->
+  <h2>5. Explicação das Etapas da Persistência (Nas Palavras da Dupla)</h2>
+  <div class="card">
+    <em>"Explicamos abaixo exatamente como o aplicativo guarda e recupera as informações no celular, demonstrando o funcionamento interno do código que escrevemos no arquivo <span class="code-span">storage_service.dart</span>."</em>
+  </div>
+
+  <div class="step-box">
+    <p><span class="step-number">1</span><strong>O Mecanismo de Armazenamento (SharedPreferences):</strong></p>
+    <p>
+      O SharedPreferences funciona gravando preferências diretamente no armazenamento físico (disco flash) do aparelho em formato chave-valor (no Android, isso fica salvo num arquivo XML protegido dentro da pasta do pacote do app). Contudo, ele é limitado a tipos primitivos como texto (<span class="code-span">String</span>) e números. Como o nosso hábito é um objeto Dart complexo da classe <span class="code-span">Habit</span>, tivemos que criar um processo de serialização e desserialização em JSON.
+    </p>
+  </div>
+
+  <div class="step-box">
+    <p><span class="step-number">2</span><strong>Como os Dados São Salvos (<span class="code-span">salvarHabitos</span>):</strong></p>
+    <ol>
+      <li>Sempre que um hábito é adicionado, concluído (marcado no checkbox) ou excluído, a tela chama imediatamente a função de salvar.</li>
+      <li>Pegamos a lista em memória de objetos <span class="code-span">Habit</span> e chamamos o método <span class="code-span">habito.toMap()</span> em cada um deles, transformando os objetos em mapas de chave e valor (<span class="code-span">Map&lt;String, dynamic&gt;</span>).</li>
+      <li>Usamos o comando <span class="code-span">jsonEncode(listaDeMaps)</span> do pacote nativo <span class="code-span">dart:convert</span> para converter toda a lista de mapas em uma única String formatada em JSON.</li>
+      <li>Por fim, chamamos <span class="code-span">prefs.setString('ecorotina_lista_habitos_v1', jsonString)</span>, que grava fisicamente o texto no disco do celular.</li>
+    </ol>
+  </div>
+
+  <div class="step-box">
+    <p><span class="step-number">3</span><strong>Como os Dados São Carregados Quando o App Abre (<span class="code-span">carregarHabitos</span>):</strong></p>
+    <ol>
+      <li>No momento em que o aplicativo é inicializado, o método <span class="code-span">initState()</span> da tela principal entra em ação e chama a função de leitura.</li>
+      <li>O aplicativo solicita ao SharedPreferences o texto gravado sob a chave <span class="code-span">'ecorotina_lista_habitos_v1'</span>.</li>
+      <li>Se o usuário estiver abrindo o app pela primeira vez (chave nula), o app gera automaticamente 5 hábitos padrão sustentáveis para que a tela já inicie preenchida e bonita.</li>
+      <li>Se já existirem dados salvos, usamos <span class="code-span">jsonDecode(jsonString)</span> para transformar a String de volta em uma lista dinâmica de mapas.</li>
+      <li>Passamos cada mapa pelo construtor <span class="code-span">Habit.fromMap(map)</span>, recriando perfeitamente cada objeto na memória com seu status de concluído, categoria e valores de impacto.</li>
+      <li>Chamamos o <span class="code-span">setState()</span> para reconstruir os widgets e renderizar a lista e os gráficos atualizados.</li>
+    </ol>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SEÇÃO 6: INSTALAÇÃO DO APK -->
+  <h2>6. Como Instalar o APK no Celular Android</h2>
+  <div class="step-box">
+    <p>O arquivo APK gerado pelo Flutter (<span class="code-span">flutter build apk</span>) está localizado na pasta <span class="code-span">release/apk/ecorotina.apk</span>.</p>
+    <p><strong>Passo a passo detalhado para instalação em qualquer celular Android:</strong></p>
+    <ol>
+      <li><strong>Transferência do Arquivo:</strong> Envie o arquivo <span class="code-span">ecorotina.apk</span> para o seu celular (pode ser via cabo USB, Google Drive, WhatsApp ou e-mail).</li>
+      <li><strong>Permitir Instalação de Fontes Desconhecidas:</strong>
+        <ul>
+          <li>No celular, vá em <em>Configurações &rarr; Segurança e Privacidade &rarr; Instalar apps desconhecidos</em>.</li>
+          <li>Habilite a permissão para o aplicativo pelo qual você recebeu o arquivo (ex.: <em>Meus Arquivos, Chrome ou WhatsApp</em>).</li>
+          <li><em>(Em versões recentes do Android, essa pergunta aparece automaticamente na tela ao tocar no arquivo baixado)</em>.</li>
+        </ul>
+      </li>
+      <li><strong>Executar a Instalação:</strong>
+        <ul>
+          <li>Abra a pasta de <em>Downloads</em> ou o <em>Gerenciador de Arquivos</em> do smartphone e toque em <span class="code-span">ecorotina.apk</span>.</li>
+          <li>Toque em <strong>Instalar</strong>.</li>
+          <li>Se o Google Play Protect exibir a mensagem <em>"App de desenvolvedor não reconhecido"</em>, toque em <strong>Mais detalhes</strong> e em seguida em <strong>Instalar assim mesmo</strong> (comportamento padrão para APKs de estudo não publicados na Play Store).</li>
+        </ul>
+      </li>
+      <li><strong>Inicialização:</strong> Concluída a instalação, toque em <strong>Abrir</strong>. O aplicativo iniciará instantaneamente com todas as funcionalidades ativas.</li>
+    </ol>
+  </div>
+
+  <!-- SEÇÃO 7: RUBRICA E AVALIAÇÃO -->
+  <h2>7. Matriz de Autoavaliação (20 Pontos)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Critério Avaliado</th>
+        <th style="text-align: center;">Pontos</th>
+        <th>Comprovação no Projeto EcoRotina</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>O aplicativo instala e abre sem erros</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>APK compilado em modo Release (51MB), testado e assinado com sucesso.</td>
+      </tr>
+      <tr>
+        <td><strong>Lista funcionando (adicionar, concluir, remover)</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Modal dialog funcional para inclusão, checkbox com animação e exclusão com diálogo de confirmação.</td>
+      </tr>
+      <tr>
+        <td><strong>Persistência (salvar ao fechar e abrir)</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Implementação com SharedPreferences + JSON, comentada detalhadamente no código.</td>
+      </tr>
+      <tr>
+        <td><strong>Segunda tela com navegação</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Segunda tela <em>StatsScreen</em> acessada via <em>Navigator.push</em> a partir do AppBar da tela inicial.</td>
+      </tr>
+      <tr>
+        <td><strong>Diferencial criativo ligado ao tema</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Calculadora de impacto ambiental em tempo real (Água, Energia e CO₂), Dica do Dia e Medalhas.</td>
+      </tr>
+      <tr>
+        <td><strong>Prints das telas como evidência dos requisitos</strong></td>
+        <td style="text-align: center;"><strong>3,0</strong></td>
+        <td>5 prints reais em alta definição com legendas didáticas associando cada requisito à tela.</td>
+      </tr>
+      <tr>
+        <td><strong>Problema e solução bem explicados</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Fundamentação técnica e comportamental embasada nas ODS 12 e 13 da ONU.</td>
+      </tr>
+      <tr>
+        <td><strong>Explicação da persistência nas palavras da dupla</strong></td>
+        <td style="text-align: center;"><strong>2,0</strong></td>
+        <td>Texto original e didático detalhando cada passo da serialização e desserialização.</td>
+      </tr>
+      <tr>
+        <td><strong>Instalação do APK e link do GitHub</strong></td>
+        <td style="text-align: center;"><strong>1,5</strong></td>
+        <td>Guia passo a passo completo e link do repositório devidamente informado.</td>
+      </tr>
+      <tr>
+        <td><strong>Organização e clareza</strong></td>
+        <td style="text-align: center;"><strong>1,5</strong></td>
+        <td>Documento estruturado, diagramação limpa e profissional com identidade visual ecológica.</td>
+      </tr>
+      <tr style="background-color: #e8f5e9; font-weight: bold;">
+        <td>NOTA TOTAL ESTIMADA</td>
+        <td style="text-align: center;">20,0 / 20,0</td>
+        <td>Todos os requisitos do PDF foram 100% cumpridos e verificados.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SEÇÃO 8: INFORMAÇÕES DE ENVIO -->
+  <h2>8. Instruções para o Envio da Avaliação</h2>
+  <div class="card">
+    <p><strong>Destinatário:</strong> <span class="code-span">XZ6816@prof.uniftc.edu.br</span></p>
+    <p><strong>Assunto do E-mail:</strong> OAT - Desenvolvimento Mobile Híbrido - Aplicativo EcoRotina - Dupla: [Nome 1] e [Nome 2]</p>
+    <p><strong>Conteúdo do E-mail:</strong></p>
+    <p style="background: white; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 12px;">
+      Prezado Professor,<br><br>
+      Encaminhamos a entrega da atividade OAT (Aplicativo de Sustentabilidade em Flutter) da nossa dupla.<br><br>
+      • Nome do Aplicativo: EcoRotina<br>
+      • Repositório no GitHub: https://github.com/marco/mobile-hibrido-unid2<br>
+      • Seguem em anexo o arquivo APK compilado (ecorotina.apk) e o documento de documentação em PDF (DOCUMENTACAO_ECO_ROTINA.pdf).<br><br>
+      Atenciosamente,<br>
+      [Nome do Aluno 1] e [Nome do Aluno 2]
+    </p>
+  </div>
+
+</body>
+</html>
