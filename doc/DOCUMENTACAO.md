@@ -183,3 +183,4 @@ O arquivo executável do aplicativo foi gerado com sucesso via linha de comando 
 | **Instalação do APK e link do GitHub** | 1,5 | **1,5** | Guia passo a passo completo com orientações de permissão do Android e link informado. |
 | **Organização e clareza** | 1,5 | **1,5** | Estruturação exemplar, layout profissional e sumário limpo. |
 | **TOTAL** | **20,0** | **20,0** | **Pontuação máxima pretendida.** |
+

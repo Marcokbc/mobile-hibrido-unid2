@@ -52,7 +52,7 @@ O arquivo executável do aplicativo já está compilado e disponível na pasta:
 - Flutter SDK instalado (versão 3.24 ou superior)
 - Android SDK configurado
 
-### Comandos
+### Comandos Flutter
 ```bash
 # Obter as dependências do pub
 flutter pub get
@@ -66,6 +66,50 @@ flutter run
 # Compilar novo arquivo APK de produção (Release)
 flutter build apk
 ```
+
+---
+
+## 📱 Como Rodar no Celular Físico como Dev Flutter
+
+Você pode executar o app diretamente no seu celular com suporte completo a **Hot Reload** (alterar o código e ver na hora):
+
+### Passo 1: Ativar o Modo Desenvolvedor no Celular Android
+1. No seu celular, vá em **Configurações** > **Sobre o telefone**.
+2. Toque **7 vezes seguidas** em **"Número da versão"** (ou *Versão da Build*) até aparecer *"Você agora é um desenvolvedor"*.
+3. Volte e entre no novo menu **Opções do desenvolvedor** (ou *Configurações adicionais* > *Opções do desenvolvedor*).
+4. Ative a opção **Depuração USB**.
+
+---
+
+### Passo 2: Executar no Celular (Via Cabo USB - Mais Rápido)
+1. Conecte o celular ao computador via cabo USB.
+2. Na tela do celular, quando perguntar *"Permitir depuração USB?"*, marque **Sempre permitir** e toque em **Permitir**.
+3. No terminal do computador, verifique se o celular foi reconhecido:
+   ```bash
+   flutter devices
+   ```
+   *(O nome/modelo do seu celular deve aparecer na lista)*
+4. Execute o app:
+   ```bash
+   flutter run
+   ```
+5. O Flutter vai compilar e instalar o app direto no celular em modo de desenvolvimento! Pressionando `r` no terminal você aciona o **Hot Reload**.
+
+---
+
+### Passo Alternativo: Sem Fio (Depuração Wi-Fi no Android 11+)
+1. No celular (conectado na mesma rede Wi-Fi do PC), vá em **Opções do desenvolvedor** > **Depuração sem fio** e ative-a.
+2. Toque em **"Emparelhar dispositivo com código de pareamento"** (mostrará o IP, porta e código de 6 dígitos).
+3. No terminal do PC, rode:
+   ```bash
+   adb pair <IP>:<PORTA_DO_PAREAMENTO>
+   ```
+   *(Digite o código de 6 dígitos quando solicitado)*
+4. Em seguida, conecte:
+   ```bash
+   adb connect <IP>:<PORTA_PRINCIPAL>
+   ```
+5. Agora rode `flutter run` normalmente!
 
 ---
 
