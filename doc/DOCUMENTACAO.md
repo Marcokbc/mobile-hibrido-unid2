@@ -12,7 +12,7 @@
 - **Curso:** Engenharia / Ciência da Computação / Análise e Desenvolvimento de Sistemas
 - **Disciplina:** Desenvolvimento Mobile Híbrido (Flutter)
 - **Professor / Avaliador:** Prof. XZ6816 (`XZ6816@prof.uniftc.edu.br`)
-- **Repositório GitHub:** `https://github.com/marco/mobile-hibrido-unid2` *(ou link do repositório da sua conta)*
+- **Repositório GitHub:** `https://github.com/Marcokbc/mobile-hibrido-unid2`
 
 ---
 
@@ -155,31 +155,6 @@ O arquivo executável do aplicativo foi gerado com sucesso via linha de comando 
 4. **Abrir e Usar:**
    - Clique em **Abrir** ou procure pelo ícone **EcoRotina** no menu de aplicativos do smartphone. O app abrirá instantaneamente sem nenhum erro.
 
----
-
-## 7. Informações de Entrega e Repositório
-
-- **Link do Repositório no GitHub:** `https://github.com/marco/mobile-hibrido-unid2`
-- **Destinatário do envio por e-mail:** `XZ6816@prof.uniftc.edu.br`
-- **Assunto sugerido:** *Entrega OAT - Desenvolvimento Mobile Híbrido - EcoRotina (Dupla: [Nomes])*
-- **Anexos:**
-  1. Arquivo `ecorotina.apk` (disponível em `release/apk/ecorotina.apk`)
-  2. Documento `DOCUMENTACAO_ECO_ROTINA.pdf` (disponível em `doc/DOCUMENTACAO_ECO_ROTINA.pdf`)
-
----
-
-## 8. Tabela de Autoavaliação Baseada nos Critérios do Trabalho
-
-| Critério Avaliado | Pontuação Máxima | Pontuação Esperada | Justificativa / Evidência |
-| :--- | :---: | :---: | :--- |
-| **O aplicativo instala e abre sem erros** | 2,0 | **2,0** | Build release gerado sem falhas; APK de 51MB assinado e testado. |
-| **Lista funcionando (adicionar, concluir, remover)** | 2,0 | **2,0** | Interface completa com modal dialog, checkbox funcional e remoção com confirmação. |
-| **Persistência (salvar ao fechar e carregar ao abrir)** | 2,0 | **2,0** | Implementado com `shared_preferences` + `jsonEncode`/`jsonDecode`, comentado linha a linha. |
-| **Segunda tela com navegação** | 2,0 | **2,0** | Segunda tela `StatsScreen` com navegação via `Navigator.push()` no AppBar. |
-| **Diferencial criativo ligado ao tema** | 2,0 | **2,0** | Calculadora de impacto ambiental em tempo real (Água, Energia e \(CO_2\)), Dica do Dia e Medalhas. |
-| **Prints das telas como evidência** | 3,0 | **3,0** | 5 prints nítidos em alta definição com legendas detalhadas de cada requisito. |
-| **Problema e solução bem explicados** | 2,0 | **2,0** | Contextualização sólida fundamentada nas metas ODS 12 e 13 da ONU. |
-| **Explicação da persistência nas palavras da dupla** | 2,0 | **2,0** | Redação didática detalhando as etapas de Map, JSON, SharedPreferences e reconstrução. |
 | **Instalação do APK e link do GitHub** | 1,5 | **1,5** | Guia passo a passo completo com orientações de permissão do Android e link informado. |
 | **Organização e clareza** | 1,5 | **1,5** | Estruturação exemplar, layout profissional e sumário limpo. |
 | **TOTAL** | **20,0** | **20,0** | **Pontuação máxima pretendida.** |
